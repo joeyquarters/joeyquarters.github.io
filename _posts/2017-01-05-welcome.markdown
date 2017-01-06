@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Welcome"
+date:   2017-01-05 23:49:03 -0500
+categories: update
+---
+Welcome to my long overdue personal portfolio and blog. Please bare with me as this will be a constant work in progress. In the meantime, feel free to check out my Github ({% include icon-github.html username="joeyquarters" %}) and Twitter ({% include icon-twitter.html username="joeyquarters" %}) accounts.
+
+Want to get in touch? Send me an email at {{site.email}}.
