@@ -18,14 +18,13 @@ email: joeyquarters@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Portfolio and blog for Washington, D.C. based Web Developer, Joey Nichols
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "www.joeyquarters.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://www.joeyquarters.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: joeyquarters
 github_username:  joeyquarters
 google_analytics: UA-89926811-1
 
 # Build settings
 markdown: kramdown
-theme: minima
 gems:
   - jekyll-feed
 exclude:
