@@ -4,3 +4,9 @@ _site
 # Jekyll stuff
 .sass-cache
 .jekyll-metadata
+
+# Etc
+.DS_Store
+
+# NPM
+node_modules
