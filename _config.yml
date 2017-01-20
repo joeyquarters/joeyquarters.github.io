@@ -23,12 +23,26 @@ twitter_username: joeyquarters
 github_username:  joeyquarters
 google_analytics: UA-89926811-1
 
-# Build settings
+# Markdown settings
 markdown: kramdown
-gems:
-  - jekyll-feed
+kramdown:
+  syntax_highlighter: rouge
+
+# SCSS Settings
+sass:
+  add_charset: true
+  sass_dir: assets/scss
+  style: compressed
+
+# Build settings
 exclude:
   - Gemfile
   - Gemfile.lock
-sass:
-  style: compressed
+  - CNAME
+  - README.md
+  - assets/scss
+
+# Plugin settings
+gems:
+  - jekyll-feed
+  - jekyll-sitemap
