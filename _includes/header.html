@@ -6,21 +6,7 @@
 			{{ site.title | escape }}
 		</a>
 
-		<nav class="site-nav">
-			
-			<ul>
-				{% for item in site.pages %}
-					{% if item.title %}
-						<li>
-							<a href="{{ item.url | relative_url }}">
-								{{ item.title | escape }}
-							</a>
-						</li>
-					{% endif %}
-				{% endfor %}
-			</ul>
-
-		</nav>
+		{% include nav.html %}
 		
 	</div>
 
