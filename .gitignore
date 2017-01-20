@@ -1,3 +1,6 @@
+# Compiled site directory
 _site
+
+# Jekyll stuff
 .sass-cache
 .jekyll-metadata
