@@ -1,0 +1,39 @@
+.hero {
+	background: $jq-teal linear-gradient(to bottom right, $jq-teal, #6772E5) no-repeat;
+	color: white;
+}
+
+
+/////////////
+// Buttons //
+/////////////
+
+.btn {
+	text-align: center;
+	white-space: nowrap;
+	cursor: pointer;
+	padding: 0.75em 1em;
+}
+
+//////////////
+// Headings //
+//////////////
+
+// This styles an inline element (e.g. span) within a heading
+.headline {
+	display: inline-block;
+	position: relative;
+	padding-left: 10px;
+	padding-right: 10px;
+	&:after {
+		content: " ";
+		background-color: rgba($jq-teal, 0.3);
+		height: 6px;
+		position: absolute;
+		width: 100%;
+		bottom: 0.07em;
+		left: 0;
+		right: 0;
+		z-index: -1;
+	}
+}
