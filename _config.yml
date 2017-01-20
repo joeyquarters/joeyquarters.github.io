@@ -40,7 +40,6 @@ exclude:
   - Gemfile.lock
   - CNAME
   - README.md
-  - assets/scss
 
 # Plugin settings
 gems:
