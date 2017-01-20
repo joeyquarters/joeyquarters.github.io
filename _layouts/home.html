@@ -1,23 +1,44 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-<div class="home">
-	
-	<h1 class="page-heading">Posts</h1>
+	{% include head.html %}
 
-	{{ content }}
+	<body class="home">
 
-	<ul class="post-list">
-		{% for post in site.posts %}
-			<li>
-				<h2>
-					<a href="{{ post.url }}">
-						{{ post.title }}
-					</a>
-				</h2>
-			</li>
-		{% endfor %}
-	</ul>
+		<div class="hero hero--home">
+			
+			{% include header.html %}
 
-</div>
+			<div class="hero__content">
+				
+				<h1>Hello there!</h1>
+				<h3>I'm Joey Nichols, full time human being on the planet Earth.</h3>
+				<a class="btn btn-primary" href="#work">
+					See my work
+				</a>
+
+			</div>
+
+		</div>
+
+		<main class="page-content" aria-label="Content">
+
+			<section>
+				
+				<h1><span class="headline">Purus Malesuada Vulputate Etiam Pharetra</span></h1>
+
+				<h2><span class="headline">Sample Headline</span></h2>
+
+				<h3><span class="headline">Lorem Ipsum Dolor Sit Amet</span></h3>
+
+				<h4><span class="headline">Cursus Lorem Commodo Elit Sem</span></h4>
+
+			</section>
+
+		</main>
+
+		{% include footer.html %}
+
+	</body>
+
+</html>
