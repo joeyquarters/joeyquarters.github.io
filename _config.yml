@@ -45,3 +45,4 @@ exclude:
 gems:
   - jekyll-feed
   - jekyll-sitemap
+  - octopress-autoprefixer
