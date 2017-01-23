@@ -40,6 +40,8 @@ exclude:
   - Gemfile.lock
   - CNAME
   - README.md
+  - package.json
+  - node_modules
 
 # Plugin settings
 gems:
