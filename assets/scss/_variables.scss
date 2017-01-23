@@ -1,15 +1,39 @@
-// =============
+// ==============
+// Typography
+// ==============
+
+$font-family-base:   'Titillium Web', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+// ==============
 // Colors
-// =============
+// ==============
 
-$text-color:     #616161;
-$link-color:     blue;
+$jq-teal:         #24B47E;
+$jq-indigo:       #6772E5;
 
-$jq-teal:        #24B47E;
+$text-color:      #616161;
+$link-color:      $jq-indigo;
+$body-bg:         #FFFFFF;
 
-// =============
+$brand-primary:   $jq-indigo;
+$brand-secondary: $jq-teal;
+
+// ==============
 // Spacing
-// =============
+// ==============
 
-$grid-gutter:     30px;
+$spacing:         60px;
+
+$grid-gutter:     15px;
 $grid-columns:    12;
+
+// ==============
+// Media Queries
+// ==============
+
+$breakpoints: (
+	xs:   0,
+	sm:   25em,
+	md:   48em,
+	lg:   60em
+);

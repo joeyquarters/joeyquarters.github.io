@@ -1,18 +1,61 @@
-.hero {
-	background: $jq-teal linear-gradient(to bottom right, $jq-teal, #6772E5) no-repeat;
-	color: white;
+////////////////////
+// Grid additions //
+////////////////////
+
+.container-fluid,
+.container,
+div[class^="col"] {
+	position: relative;
 }
 
+/////////////
+// Modules //
+/////////////
+
+.module {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
 
 /////////////
 // Buttons //
 /////////////
 
 .btn {
+	@include type-ui;
+	display: inline-block;
 	text-align: center;
 	white-space: nowrap;
 	cursor: pointer;
 	padding: 0.75em 1em;
+	line-height: 1;
+	text-decoration: none;
+	box-shadow: 0px 4px 6px rgba(darken($brand-primary, 30), 0.1),
+							0px 1px 3px rgba(black, 0.08);
+	transition: all 0.2s ease-out;
+	&:hover, &:focus {
+		text-decoration: none;
+		transform: translateY(-1px);
+		box-shadow: 0px 7px 14px rgba(darken($brand-primary, 30), 0.1),
+								0px 3px 6px rgba(black, 0.08);
+	}
+}
+
+.btn-primary {
+	background-color: $brand-primary;
+	color: white;
+	text-shadow: 0px 1px 3px rgba(darken($brand-primary, 10), 0.4);
+	&:hover, &:focus {
+		color: white;
+	}
+}
+
+.btn-secondary {
+	background-color: $brand-secondary;
+	color: white;
+	&:hover, &:focus {
+		color: white;
+	}
 }
 
 //////////////
@@ -20,20 +63,281 @@
 //////////////
 
 // This styles an inline element (e.g. span) within a heading
+
 .headline {
+	text-align: center;
+	margin-bottom: 2em;
+	span {
+		display: inline-block;
+		position: relative;
+		padding-left: 0.65em;
+		padding-right: 0.65em;
+		&:after {
+			content: " ";
+			background-color: rgba($jq-teal, 0.3);
+			height: 6px;
+			position: absolute;
+			width: 100%;
+			bottom: 0.07em;
+			left: 0;
+			right: 0;
+			z-index: -1;
+		}
+	}
+}
+
+/////////////////
+// Site Header //
+/////////////////
+
+.site-header {
+	@include clearfix;
+	padding: 1.5rem 0;
+}
+
+.site-title {
+	@include type-ui;
+	text-decoration: none;
+	color: white;
+	font-size: 1.15rem;
+	&:hover, &:focus {
+		color: rgba(white, 0.6);
+		text-decoration: none;
+	}
+}
+
+//////////////
+// Site Nav //
+//////////////
+
+.site-nav__list {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.site-nav__item {
 	display: inline-block;
+	margin-right: 3em;
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.site-nav__link {
+	@include type-ui;
+	text-decoration: none;
+	color: white;
+	font-size: 1.15rem;
+	&:hover, &:focus {
+		color: rgba(white, 0.6);
+		text-decoration: none;
+	}
+}
+
+.site-footer {
+	background: $brand-primary;
+	text-align: center;
+	padding: 1.5rem 0;
+	color: white;
+
+	a {
+		color: white;
+		text-decoration: none;
+		font-weight: 700;
+		&:hover, &:focus {
+			color: rgba(white, 0.6);
+			text-decoration: none;
+		}
+	}
+}
+
+//////////
+// Grid //
+//////////
+
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -(0.5em);
+}
+
+.grid-item {
+	padding-right: 0.5em;
+	padding-bottom: 0.5em;
+	flex-grow: 0;
+	flex-shrink: 0;
+	flex-basis: 50%;
+	max-width: 50%;
+}
+
+/////////////////
+// Work Figure //
+/////////////////
+
+.work-figure {
+	margin: 0;
 	position: relative;
-	padding-left: 10px;
-	padding-right: 10px;
-	&:after {
-		content: " ";
-		background-color: rgba($jq-teal, 0.3);
-		height: 6px;
-		position: absolute;
+	max-width: 640px;
+	max-height: 480px;
+	overflow: hidden;
+	background: $jq-teal linear-gradient(to bottom right, $jq-teal 20%, $jq-indigo 80%) no-repeat;
+
+	a {
+		display: block;
+		&:after {
+			content: "";
+			position: absolute;
+			top: 1.2em;
+			right: 1.2em;
+			bottom: 1.2em;
+			left: 1.2em;
+			opacity: 0;
+			transition: opacity 1.0s;
+			border: 1px solid white;
+		}
+		&:hover, &:focus {
+			&:after {
+				opacity: 1;
+			}
+			img {
+				opacity: 0.1;
+				transform: scale(1.1);
+			}
+			figcaption {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	}
+
+	img {
 		width: 100%;
-		bottom: 0.07em;
+		display: block;
+		transition: opacity 1.0s, transform 1.0s;
+	}
+
+	figcaption {
+		@include absolute-cover;
+		@include type-ui;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0.5em;
+		color: white;
+		font-size: 1.75rem;
+		opacity: 0;
+		transform: translateY(-15px);
+		transition: all 0.4s;
+		transition-delay: 0.2s;
+	}
+}
+
+//////////
+// Hero //
+//////////
+
+.hero {
+	background: $jq-teal linear-gradient(to bottom right, $jq-teal 20%, $jq-indigo 80%) no-repeat;
+	color: white;
+	font-weight: 200;
+	padding: $spacing 0;
+	overflow: hidden;
+}
+
+.hero__title,
+.hero__subtitle {
+	font-weight: 200;
+}
+
+// Hero Circles
+
+.hero__circle {
+	background-color: rgba($text-color, 0.12);
+	border-radius: 50%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	pointer-events: none;
+}
+
+.hero__circle:nth-child(1) {
+	height: 225px;
+	width: 225px;
+	left: -150px;
+	top: 20px;
+}
+.hero__circle:nth-child(2) {
+	height: 162px;
+	width: 162px;
+	top: -200px;
+	left: 200px;
+}
+.hero__circle:nth-child(3) {
+	height: 125px;
+	width: 125px;
+	top: 200px;
+	left: 100px;
+}
+.hero__circle:nth-child(4) {
+	height: 285px;
+	width: 285px;
+	top: 80px;
+	left: 400px;
+}
+.hero__circle:nth-child(5) {
+	height: 120px;
+	width: 120px;
+	top: -60px;
+	left: auto;
+	right: -30px;
+}
+
+//================================
+// Home Page
+//================================
+
+.home .site-header {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+}
+
+.hero--home {
+	padding: $spacing*2 0 $spacing*1.5;
+}
+
+.hero--home .hero__title {
+	font-size: 4em;
+	margin: 0;
+}
+
+.hero--home .hero__subtitle {
+	margin-top: 0.25em;
+	margin-bottom: 1em;
+}
+
+.editor-image {
+	position: absolute;
+	left: 50%;
+	width: 520px;
+	top: 0;
+	padding-top: $spacing*2;
+	z-index: 5;
+}
+
+.hero--home + .section {
+	padding-top: $spacing*1.5;
+	position: relative;
+	&:before {
+		content: "";
+		position: absolute;
+		bottom: 100%;
 		left: 0;
-		right: 0;
-		z-index: -1;
+		width: 100%;
+		border-style: solid;
+		border-width: 0 0 $spacing*1.5 100vw;
+		border-color: transparent transparent $body-bg transparent;
 	}
 }

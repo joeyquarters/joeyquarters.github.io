@@ -1,3 +1,12 @@
+////////////////
+// Typography //
+////////////////
+
+@mixin type-ui {
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
 //////////////
 // Clearfix //
 //////////////
@@ -11,3 +20,34 @@
 	}
 }
 
+///////////////////
+// Media Queries //
+///////////////////
+
+@mixin mq-min($name, $breakpoints: $breakpoints) {
+	$min: breakpoint-min($name, $breakpoints);
+	@if $min {
+		@media (min-width: $min) {
+			@content;
+		}
+	} @else {
+		@content;
+	}
+}
+
+@function breakpoint-min($name,	 $breakpoints: $breakpoints) {
+	$min: map-get($breakpoints, $name);
+	@return if($min != 0, $min, null);
+}
+
+/////////////////
+// Positioning //
+/////////////////
+
+@mixin absolute-cover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}

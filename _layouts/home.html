@@ -1,44 +1,113 @@
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+---
+layout: default
+---
 
-	{% include head.html %}
+<img class="editor-image" src="{{ '/assets/img/texteditor-temp.png' | relative_url }}" alt="Text editor">
 
-	<body class="home">
+<div class="hero hero--home">
+	
+	<div class="hero__content">
 
-		<div class="hero hero--home">
-			
-			{% include header.html %}
+		<div class="container">
 
-			<div class="hero__content">
+			<span class="hero__circle"></span>
+			<span class="hero__circle"></span>
+			<span class="hero__circle"></span>
+			<span class="hero__circle"></span>
+			<span class="hero__circle"></span>
+
+			<div class="row">
+
+				<div class="col-xs-12 col-sm-6">
+					
+					<h1 class="hero__title">Hello there!</h1>
+					<h2 class="hero__subtitle">I'm Joey Nichols, a web developer<span id="secondAdj"></span>.</h2>
+					<a class="btn btn-primary" href="#work" data-scroll>
+						See my work
+					</a>
+
+				</div>
 				
-				<h1>Hello there!</h1>
-				<h3>I'm Joey Nichols, full time human being on the planet Earth.</h3>
-				<a class="btn btn-primary" href="#work">
-					See my work
-				</a>
-
 			</div>
-
+			
 		</div>
 
-		<main class="page-content" aria-label="Content">
+	</div>
 
-			<section>
-				
-				<h1><span class="headline">Purus Malesuada Vulputate Etiam Pharetra</span></h1>
+</div>
+	
+<section class="module section" id="work">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
 
-				<h2><span class="headline">Sample Headline</span></h2>
+				<h2 class="headline"><span>Featured Work</span></h2>
 
-				<h3><span class="headline">Lorem Ipsum Dolor Sit Amet</span></h3>
+				<ul class="grid">
+					
+					<li class="grid-item wow fadeInUp">
+						<figure class="work-figure">
+							<a href="http://raymondeg.com/" target="_blank">
+								<img src="{{ '/assets/img/raymond.jpg' | relative_url }}" alt="Raymond Entertainment website screenshot">
+								<figcaption>Raymond Entertainment</figcaption>
+								<span class="sr-only">Go to the website</span>
+							</a>
+						</figure>
+					</li>
 
-				<h4><span class="headline">Cursus Lorem Commodo Elit Sem</span></h4>
+					<li class="grid-item wow fadeInUp">
+						<figure class="work-figure">
+							<a href="http://www.silverbook.org/" target="_blank">
+								<img src="{{ '/assets/img/silverbook.jpg' | relative_url }}" alt="The Silverbook website screenshot">
+								<figcaption>Silverbook</figcaption>
+								<span class="sr-only">Go to the website</span>
+							</a>
+						</figure>
+					</li>
 
-			</section>
+					<li class="grid-item wow fadeInUp">
+						<figure class="work-figure">
+							<a href="http://aidsdelaware.org/" target="_blank">
+								<img src="{{ '/assets/img/aidsde.jpg' | relative_url }}" alt="AIDS Delaware website screenshot">
+								<figcaption>AIDS Delaware</figcaption>
+								<span class="sr-only">Go to the website</span>
+							</a>
+						</figure>
+					</li>
 
-		</main>
+					<li class="grid-item wow fadeInUp">
+						<figure class="work-figure">
+							<a href="http://www.bermanco.com/" target="_blank">
+								<img src="{{ '/assets/img/bermanco.jpg' | relative_url }}" alt="Berman & Company website screenshot">
+								<figcaption>Berman & Company</figcaption>
+								<span class="sr-only">Go to the website</span>
+							</a>
+						</figure>
+					</li>
 
-		{% include footer.html %}
+					<li class="grid-item wow fadeInUp">
+						<figure class="work-figure">
+							<a href="https://www.epionline.org/" target="_blank">
+								<img src="{{ '/assets/img/epionline.jpg' | relative_url }}" alt="Employment Policies Institute website screenshot">
+								<figcaption>Employment Policies Institute</figcaption>
+								<span class="sr-only">Go to the website</span>
+							</a>
+						</figure>
+					</li>
 
-	</body>
+					<li class="grid-item wow fadeInUp">
+						<figure class="work-figure">
+							<a href="http://www.valvediseaseday.org/" target="_blank">
+								<img src="{{ '/assets/img/valvediseaseday.jpg' | relative_url }}" alt="Valve Disease Day website screenshot">
+								<figcaption>Valve Disease Day</figcaption>
+								<span class="sr-only">Go to the website</span>
+							</a>
+						</figure>
+					</li>
 
-</html>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+</section>
