@@ -31,7 +31,7 @@ wow.init();
 		// Check for element existence
 		if (!element) return;
 		// Define possible adjectives
-		var adjectives = ['part-time ninja', 'former rockstar', 'proficient dog petter', 'budding philosopher'];
+		var adjectives = ['proud eukaryotic organism', 'part-time ninja', 'former rockstar', 'proficient dog petter', 'budding philosopher'];
 		// Get a random one
 		var adjective = adjectives[Math.floor(Math.random()*adjectives.length)];
 		// Insert properly formatted string
