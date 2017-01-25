@@ -137,8 +137,9 @@ div[class^="col"] {
 .site-footer {
 	background: $brand-primary;
 	text-align: center;
-	padding: 1.5rem 0;
+	padding: 2rem 0;
 	color: white;
+	font-weight: 400;
 
 	a {
 		color: white;
@@ -206,6 +207,7 @@ div[class^="col"] {
 			figcaption {
 				opacity: 1;
 				transform: translateY(0);
+				transition-delay: 0.2s;
 			}
 		}
 	}
@@ -228,7 +230,6 @@ div[class^="col"] {
 		opacity: 0;
 		transform: translateY(-15px);
 		transition: all 0.4s;
-		transition-delay: 0.2s;
 	}
 }
 
