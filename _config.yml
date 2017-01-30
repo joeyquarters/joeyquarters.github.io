@@ -28,6 +28,7 @@ google_analytics: UA-89926811-1
 markdown: kramdown
 kramdown:
   syntax_highlighter: rouge
+  parse_block_html: true
 
 # SCSS Settings
 sass:
