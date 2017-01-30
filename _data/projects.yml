@@ -1,0 +1,23 @@
+- 'name'  : 'Raymond Entertainment'
+  'url'   : 'http://raymondeg.com/'
+  'image' : '/assets/img/raymond.jpg'
+
+- 'name'  : 'Valve Disease Day'
+  'url'   : 'http://www.valvediseaseday.org/'
+  'image' : '/assets/img/valvediseaseday.jpg'
+
+- 'name'  : 'Berman & Company'
+  'url'   : 'http://www.bermanco.com/'
+  'image' : '/assets/img/bermanco.jpg'
+
+- 'name'  : 'Silverbook'
+  'url'   : 'http://www.silverbook.org/'
+  'image' : '/assets/img/silverbook.jpg'
+
+- 'name'  : 'Employment Policies Institute'
+  'url'   : 'https://www.epionline.org/'
+  'image' : '/assets/img/epionline.jpg'
+
+- 'name'  : 'Faces of $15'
+  'url'   : 'http://www.facesof15.com/'
+  'image' : '/assets/img/faces.jpg'
