@@ -8,6 +8,12 @@ div[class^="col"] {
 	position: relative;
 }
 
+.container-fluid {
+	max-width: 64rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
 /////////////
 // Modules //
 /////////////
@@ -75,10 +81,10 @@ div[class^="col"] {
 		&:after {
 			content: " ";
 			background-color: rgba($jq-teal, 0.3);
-			height: 6px;
+			height: 10px;
 			position: absolute;
 			width: 100%;
-			bottom: 0.07em;
+			bottom: 0.1em;
 			left: 0;
 			right: 0;
 			z-index: -1;
@@ -137,9 +143,23 @@ div[class^="col"] {
 .site-footer {
 	background: $brand-primary;
 	text-align: center;
-	padding: 2rem 0;
+	padding: 0.5rem 0 2rem;
 	color: white;
 	font-weight: 400;
+	position: relative;
+
+	margin-top: $spacing*1.5;
+
+	&:before {
+		content: "";
+		position: absolute;
+		bottom: 100%;
+		left: 0;
+		width: 100%;
+		border-style: solid;
+		border-width: 0 0 $spacing*1.5 100vw;
+		border-color: transparent transparent $brand-primary transparent;
+	}
 
 	a {
 		color: white;
@@ -176,60 +196,62 @@ div[class^="col"] {
 /////////////////
 
 .work-figure {
-	margin: 0;
+	margin: 0 auto;
 	position: relative;
 	max-width: 640px;
 	max-height: 480px;
 	overflow: hidden;
+	margin-bottom: 1rem;
 	background: $jq-teal linear-gradient(to bottom right, $jq-teal 20%, $jq-indigo 80%) no-repeat;
+}
 
-	a {
-		display: block;
-		&:after {
-			content: "";
-			position: absolute;
-			top: 1.2em;
-			right: 1.2em;
-			bottom: 1.2em;
-			left: 1.2em;
-			opacity: 0;
-			transition: opacity 1.0s;
-			border: 1px solid white;
-		}
-		&:hover, &:focus {
-			&:after {
-				opacity: 1;
-			}
-			img {
-				opacity: 0.1;
-				transform: scale(1.1);
-			}
-			figcaption {
-				opacity: 1;
-				transform: translateY(0);
-				transition-delay: 0.2s;
-			}
-		}
-	}
+.work-figure__image {
+	width: 100%;
+	display: block;
+	transition: opacity 1.0s, transform 1.0s;
+}
 
-	img {
-		width: 100%;
-		display: block;
-		transition: opacity 1.0s, transform 1.0s;
-	}
+.work-figure__caption {
+	@include absolute-cover;
+	@include type-ui;
+	align-items: center;
+	color: white;
+	display: flex;
+	font-size: 1.75rem;
+	justify-content: center;
+	opacity: 0;
+	padding: 1.5em;
+	text-align: center;
+	transform: translateY(-15px);
+	transition: all 0.4s;
+}
 
-	figcaption {
-		@include absolute-cover;
-		@include type-ui;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		padding: 0.5em;
-		color: white;
-		font-size: 1.75rem;
+.work-figure__link {
+	display: block;
+	&:after {
+		content: "";
+		position: absolute;
+		top: 1.2em;
+		right: 1.2em;
+		bottom: 1.2em;
+		left: 1.2em;
 		opacity: 0;
-		transform: translateY(-15px);
-		transition: all 0.4s;
+		transition: opacity 1.0s;
+		border: 1px solid white;
+	}
+	&:hover, &:focus {
+		&:after {
+			opacity: 1;
+		}
+		.work-figure__image {
+			opacity: 0.1;
+			transform: scale(1.1);
+		}
+		.work-figure__caption {
+			opacity: 1;
+			transform: translateY(0);
+			transition-delay: 0.2s;
+		}
 	}
 }
 
@@ -306,7 +328,12 @@ div[class^="col"] {
 }
 
 .hero--home {
-	padding: $spacing*2 0 $spacing*1.5;
+	padding: $spacing 0 $spacing*1.5;
+	text-align: center;
+	@include mq-min(lg) {
+		padding: $spacing*1.5 0;
+		text-align: left;
+	}
 }
 
 .hero--home .hero__title {
@@ -321,11 +348,9 @@ div[class^="col"] {
 
 .editor-image {
 	position: absolute;
-	left: 50%;
-	width: 520px;
+	left: 0;
 	top: 0;
-	padding-top: $spacing*2;
-	z-index: 5;
+	width: 100%;
 }
 
 .hero--home + .section {
@@ -341,4 +366,9 @@ div[class^="col"] {
 		border-width: 0 0 $spacing*1.5 100vw;
 		border-color: transparent transparent $body-bg transparent;
 	}
+}
+
+.home-intro {
+	text-align: center;
+	font-size: 1.75rem;
 }
