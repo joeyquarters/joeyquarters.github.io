@@ -83,7 +83,7 @@ layout: default
 
 								<figure class="work-figure">
 									<a class="work-figure__link" href="{{ project.url }}" target="_blank">
-										<img class="work-figure__image" src="{{ project.image | relative_url }}" alt="{{ project.name }} website screenshot">
+										<img class="work-figure__image" src="{{ project.image | relative_url }}" srcset="{{ project.image_2x | relative_url }} 2x" alt="{{ project.name }} website screenshot">
 										<figcaption class="work-figure__caption">{{ project.name }}</figcaption>
 										<span class="sr-only">Go to the website</span>
 									</a>
