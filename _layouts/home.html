@@ -19,7 +19,7 @@ layout: default
 				<div class="col-xs-12 col-sm-12 col-md-6">
 					
 					<h1 class="hero__title">Hello there!</h1>
-					<h2 class="hero__subtitle wow fadeInUp">I'm Joey Nichols, a web developer<span id="secondAdj"> and proud eukaryotic organism</span>.</h2>
+					<h2 class="hero__subtitle wow fadeInUp" data-wow-delay="0.5s">I'm Joey Nichols, a web developer<span id="secondAdj"> and proud eukaryotic organism</span>.</h2>
 					<a class="btn btn-primary" href="#work" data-scroll>
 						See my work
 					</a>
@@ -27,7 +27,7 @@ layout: default
 				</div>
 
 				<div class="col-md-6">
-					<img class="visible-lg editor-image" src="{{ '/assets/img/text-editor.png' | relative_url }}" alt="Text editor">
+					<img class="visible-lg editor-image wow fadeInUp" src="{{ '/assets/img/text-editor.png' | relative_url }}" alt="Text editor">
 				</div>
 				
 			</div>
@@ -43,7 +43,9 @@ layout: default
 	<section class="module section" id="about">
 		<div class="container-fluid">
 					
-			<h2 class="headline"><span>Introduction</span></h2>
+			<h2 class="headline">
+				<span>Introduction</span>
+			</h2>
 			
 			<div class="home-intro">
 				{{ content }}
@@ -61,7 +63,9 @@ layout: default
 			<div class="row">
 				<div class="col-xs-12">
 
-					<h2 class="headline"><span>Featured Work</span></h2>
+					<h2 class="headline">
+						<span>Featured Work</span>
+					</h2>
 
 					<ul class="row">
 
