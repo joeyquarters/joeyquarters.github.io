@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I am a Washington, D.C. based web developer for a small public relations firm. I primarily make websites using custom themes built on top of the WordPress CMS.
+I am a Washington, D.C. based frontend developer. Currently, I work on the product team at [The Atlantic](https://www.theatlantic.com). Previously, I was a full stack developer at a small public relations firm with a primary focus on custom WordPress websites.
 
 Outside of work, I enjoy creating/appreciating music, any physical activity, and exploring the great outdoors.
 
