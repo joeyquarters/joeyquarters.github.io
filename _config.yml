@@ -23,6 +23,7 @@ twitter_username: joeyquarters
 github_username:  joeyquarters
 linkedin_username: joeyquarters
 google_analytics: UA-89926811-1
+github: [metadata]
 
 # Markdown settings
 markdown: kramdown
