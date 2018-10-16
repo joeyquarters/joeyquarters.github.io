@@ -1,3 +1,13 @@
+- 'name'     : 'The Atlantic'
+  'url'      : 'https://www.theatlantic.com/'
+  'image'    : '/assets/img/theatlantic.jpg'
+  'image_2x' : '/assets/img/theatlantic@2x.jpg'
+
+- 'name'     : 'CityLab'
+  'url'      : 'https://www.citylab.com/'
+  'image'    : '/assets/img/citylab.jpg'
+  'image_2x' : '/assets/img/citylab@2x.jpg'
+
 - 'name'     : 'Raymond Entertainment'
   'url'      : 'http://raymondeg.com/'
   'image'    : '/assets/img/raymond.jpg'
