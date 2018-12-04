@@ -39,18 +39,22 @@ div[class^="col"] {
 	box-shadow: 0px 4px 6px rgba(darken($brand-primary, 30), 0.1),
 							0px 1px 3px rgba(black, 0.08);
 	transition: all 0.2s ease-out;
+	text-shadow: 0px 1px 3px rgba(darken($brand-primary, 10), 0.4);
 	&:hover, &:focus {
 		text-decoration: none;
 		transform: translateY(-1px);
 		box-shadow: 0px 7px 14px rgba(darken($brand-primary, 30), 0.1),
 								0px 3px 6px rgba(black, 0.08);
 	}
+
+	+ .btn {
+		margin-left: 0.25em;
+	}
 }
 
 .btn-primary {
 	background-color: $brand-primary;
 	color: white;
-	text-shadow: 0px 1px 3px rgba(darken($brand-primary, 10), 0.4);
 	&:hover, &:focus {
 		color: white;
 	}
