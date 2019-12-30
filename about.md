@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I am a Washington, D.C. based frontend developer. Currently, I work on the product team at [The Atlantic](https://www.theatlantic.com). Previously, I was a full stack developer at a small public relations firm with a primary focus on custom WordPress websites.
+I am a Los Angeles, CA based software engineer with a focus on front end. Currently, I work at an e-commerce startup called [The Black Tux](https://theblacktux.com). Previously, I worked on the product team at _[The Atlantic](https://www.theatlantic.com)_ in Washington, DC. Before that, I was a full stack developer at a small public relations firm with a primary focus on custom WordPress websites.
 
 Outside of work, I enjoy creating/appreciating music, any physical activity, and exploring the great outdoors.
 
