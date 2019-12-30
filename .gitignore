@@ -7,6 +7,11 @@ _site
 
 # Etc
 .DS_Store
+.vscode
 
 # NPM
 node_modules
+
+# Bundler
+.bundle
+vendor

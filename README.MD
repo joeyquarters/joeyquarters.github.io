@@ -6,7 +6,7 @@ The code for my personal website. Built with Jekyll and Github Pages.
 
 1. `git clone` this repo
 2. `cd` into the directory
-3. Run `bundle install`
+3. Run `bundle install --path vendor/bundle`
 4. Run `npm install`
 5. Run `bundle exec jekyll build`
 
