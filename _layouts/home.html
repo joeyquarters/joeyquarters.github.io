@@ -3,100 +3,94 @@ layout: default
 ---
 
 <div class="hero hero--home">
+  <div class="hero__content">
+    <div class="container-fluid">
+      <span class="hero__circle"></span>
+      <span class="hero__circle"></span>
+      <span class="hero__circle"></span>
+      <span class="hero__circle"></span>
+      <span class="hero__circle"></span>
 
-	<div class="hero__content">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6">
+          <h1 class="hero__title">Hello there!</h1>
+          <h2 class="hero__subtitle wow fadeInUp" data-wow-delay="0.5s">
+            I'm Joey Nichols, a software engineer<span id="secondAdj">
+              and proud eukaryotic organism</span
+            >.
+          </h2>
+          <a class="btn btn-primary" href="#work" data-scroll>Portfolio</a>
+          <a class="btn btn-secondary" href="https://medium.com/@joeyquarters"
+            >Writing</a
+          >
+        </div>
 
-		<div class="container-fluid">
-
-			<span class="hero__circle"></span>
-			<span class="hero__circle"></span>
-			<span class="hero__circle"></span>
-			<span class="hero__circle"></span>
-			<span class="hero__circle"></span>
-
-			<div class="row">
-
-				<div class="col-xs-12 col-sm-12 col-md-6">
-
-					<h1 class="hero__title">Hello there!</h1>
-					<h2 class="hero__subtitle wow fadeInUp" data-wow-delay="0.5s">I'm Joey Nichols, a web developer<span id="secondAdj"> and proud eukaryotic organism</span>.</h2>
-					<a class="btn btn-primary" href="#work" data-scroll>Portfolio</a>
-					<a class="btn btn-secondary" href="https://medium.com/@joeyquarters">Writing</a>
-
-				</div>
-
-				<div class="col-md-6">
-					<img class="visible-lg editor-image wow fadeInUp" src="{{ '/assets/img/text-editor.png' | relative_url }}" alt="Text editor">
-				</div>
-
-			</div>
-
-		</div>
-
-	</div>
-
+        <div class="col-md-6">
+          <img
+            class="visible-lg editor-image wow fadeInUp"
+            src="{{ '/assets/img/text-editor.png' | relative_url }}"
+            alt="Text editor"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 {% if content %}
 
-	<section class="module section" id="about">
-		<div class="container-fluid">
+<section class="module section" id="about">
+  <div class="container-fluid">
+    <h2 class="headline">
+      <span>Introduction</span>
+    </h2>
 
-			<h2 class="headline">
-				<span>Introduction</span>
-			</h2>
+    <div class="home-intro">{{ content }}</div>
+  </div>
+</section>
 
-			<div class="home-intro">
-				{{ content }}
-			</div>
+{% endif %} {% if site.data.projects %}
 
-		</div>
-	</section>
+<section class="module section" id="work">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2 class="headline">
+          <span>Featured Work</span>
+        </h2>
 
-{% endif %}
+        <ul class="row">
+          {% for project in site.data.projects %} {% assign remainder =
+          forloop.index|modulo:2 %} {% if remainder == 0 %} {% capture animation
+          %}fadeInRight{% endcapture %} {% else %} {% capture animation
+          %}fadeInLeft{% endcapture %} {% endif %}
 
-{% if site.data.projects %}
+          <li class="col-sm-6 col-xs-12 wow {{ animation }}">
+            <a
+              class="work-figure-link"
+              href="{{ project.url }}"
+              target="_blank"
+            >
+              <figure class="work-figure">
+                <img
+                  class="work-figure__image"
+                  src="{{ project.image | relative_url }}"
+                  srcset="{{ project.image_2x | relative_url }} 2x"
+                  alt="{{ project.name }} website screenshot"
+                />
+                <figcaption class="work-figure__caption">
+                  {{ project.name }}
+                </figcaption>
+              </figure>
+              <span class="sr-only">Go to the website</span>
+            </a>
+          </li>
 
-	<section class="module section" id="work">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-xs-12">
-
-					<h2 class="headline">
-						<span>Featured Work</span>
-					</h2>
-
-					<ul class="row">
-
-						{% for project in site.data.projects %}
-
-							{% assign remainder = forloop.index|modulo:2 %}
-
-							{% if remainder == 0 %}
-								{% capture animation %}fadeInRight{% endcapture %}
-							{% else %}
-								{% capture animation %}fadeInLeft{% endcapture %}
-							{% endif %}
-
-							<li class="col-sm-6 col-xs-12 wow {{ animation }}">
-
-								<a class="work-figure-link" href="{{ project.url }}" target="_blank">
-									<figure class="work-figure">
-										<img class="work-figure__image" src="{{ project.image | relative_url }}" srcset="{{ project.image_2x | relative_url }} 2x" alt="{{ project.name }} website screenshot">
-										<figcaption class="work-figure__caption">{{ project.name }}</figcaption>
-									</figure>
-									<span class="sr-only">Go to the website</span>
-								</a>
-
-							</li>
-
-						{% endfor %}
-
-					</ul>
-
-				</div>
-			</div>
-		</div>
-	</section>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
 {% endif %}
